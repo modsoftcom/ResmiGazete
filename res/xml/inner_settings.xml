@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <EditTextPreference
+        android:defaultValue="12.09.2015"
+        android:key="current" />
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="first_run" />
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="show_pageview_tip" />
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="show_main_tip" />
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="show_favori_tip" />
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="show_main_long_tip" />
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="notification_received" />
+
+    <EditTextPreference
+        android:defaultValue=""
+        android:key="notification" />
+
+</PreferenceScreen>

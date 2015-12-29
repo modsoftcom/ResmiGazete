@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry exported="true" kind="lib" path="D:/SOFTWARE DEVELOPMENT/JAVA/Library/commons-net-3.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/SOFTWARE DEVELOPMENT/JAVA/Library/gson-2.3.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/SOFTWARE DEVELOPMENT/JAVA/Library/jsoup-1.8.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/SOFTWARE DEVELOPMENT/JAVA/Library/Parse-1.11.0/Parse-1.11.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/SOFTWARE DEVELOPMENT/JAVA/Library/Parse-1.11.0/bolts-android-1.2.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/SOFTWARE DEVELOPMENT/JAVA/WorkPlace/ArduinoHaber/libs/android-support-v4.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

@@ -1,0 +1,366 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8A2BE2"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <!-- Framelayout to display Fragments -->
+
+    <FrameLayout
+        android:id="@+id/main_frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:longClickable="true" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/main_menu_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <android.support.v4.view.PagerTabStrip
+                android:id="@+id/pager_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp" />
+        </android.support.v4.view.ViewPager>
+
+
+    </FrameLayout>
+
+    <!-- Listview to display slider menu -->
+
+    <RelativeLayout
+        android:id="@+id/slider_relative_layout"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#483D8B" >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <LinearLayout
+                    android:id="@+id/drawer_info_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/drawer_info_text_"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Gazete Tarihi"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/whitetextcolor" />
+
+                    <TextView
+                        android:id="@+id/drawer_info_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="30dp"
+                        android:text=""
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/whitetextcolor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/drawer_line_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/drawer_info_layout"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="50dp"
+                    android:background="@color/whitetextcolor" >
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/drawer_today_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/drawer_line_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/slider_button" >
+
+                    <ImageView
+                        android:id="@+id/drawer_today_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@android:drawable/ic_menu_today" />
+
+                    <TextView
+                        android:id="@+id/drawer_today_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Bugün"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/whitetextcolor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/drawer_archive_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/drawer_today_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/slider_button" >
+
+                    <ImageView
+                        android:id="@+id/drawer_archive_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@android:drawable/ic_menu_agenda" />
+
+                    <TextView
+                        android:id="@+id/drawer_archive_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Arşiv Arama"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/whitetextcolor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/drawer_find_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/drawer_archive_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/slider_button" >
+
+                    <ImageView
+                        android:id="@+id/drawer_find_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@android:drawable/ic_menu_search" />
+
+                    <TextView
+                        android:id="@+id/drawer_find_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Kelime Arama"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/whitetextcolor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/drawer_mukerrer_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/drawer_find_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/slider_button" >
+
+                    <ImageView
+                        android:id="@+id/drawer_mukerrer_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@android:drawable/ic_menu_recent_history" />
+
+                    <TextView
+                        android:id="@+id/drawer_mukerrer_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Son Mükerrer"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/whitetextcolor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/drawer_favorites_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/drawer_mukerrer_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/slider_button" >
+
+                    <ImageView
+                        android:id="@+id/drawer_favorites_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@android:drawable/ic_menu_myplaces" />
+
+                    <TextView
+                        android:id="@+id/drawer_favorites_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Favoriler"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/whitetextcolor" />
+                </LinearLayout>
+
+                 <LinearLayout
+                    android:id="@+id/drawer_lastpush_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/drawer_favorites_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/slider_button" >
+
+                    <ImageView
+                        android:id="@+id/drawer_lastpush_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@android:drawable/ic_menu_more" />
+
+                    <TextView
+                        android:id="@+id/drawer_lastpush_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Son Gelen Bildirim"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/whitetextcolor" />
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:id="@+id/drawer_review_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/drawer_lastpush_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/slider_button" >
+
+                    <ImageView
+                        android:id="@+id/drawer_review_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@android:drawable/ic_menu_call" />
+
+                    <TextView
+                        android:id="@+id/drawer_review_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Geri Bildirim"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/whitetextcolor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/drawer_settings_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/drawer_review_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/slider_button" >
+
+                    <ImageView
+                        android:id="@+id/drawer_settings_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@android:drawable/ic_menu_preferences" />
+
+                    <TextView
+                        android:id="@+id/drawer_settings_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Ayarlar"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/whitetextcolor" />
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:id="@+id/drawer_help_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/drawer_settings_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/slider_button" >
+
+                    <ImageView
+                        android:id="@+id/drawer_help_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@android:drawable/ic_menu_help" />
+
+                    <TextView
+                        android:id="@+id/drawer_help_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Yardım"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/whitetextcolor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/drawer_about_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/drawer_help_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/slider_button" >
+
+                    <ImageView
+                        android:id="@+id/drawer_about_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@android:drawable/ic_menu_info_details" />
+
+                    <TextView
+                        android:id="@+id/drawer_about_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Hakkında"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/whitetextcolor" />
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>

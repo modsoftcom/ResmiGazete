@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <SwitchPreference android:key="notifications" android:defaultValue="true" android:title="Bildirim Gösterme"/>
+    <ListPreference android:defaultValue="chime" android:title="Bildirim Tonu Seçin" android:entryValues="@array/ToneValues" android:key="notification_tone" android:entries="@array/Tones"/>    
+
+</PreferenceScreen>

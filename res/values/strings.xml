@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Resmi Gazete</string>
+    <string name="title_activity_ana_sayfa">AnaSayfa</string>
+    <string name="drawer_open">Seçenekler</string>
+    <string name="drawer_close">Resmi Gazete</string>
+    <string name="title_activity_page_view">Gazete Sayfası</string>
+    <string name="title_activity_favoriler">Favoriler</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string-array name="Tones">
+        <item>Kapı Zili</item>
+        <item>Islık</item>
+        <item>Telefon Zili</item>
+        <item>Korna</item>
+    </string-array>
+    <string-array name="ToneValues">
+        <item>chime</item>
+        <item>fluitennaarchick</item>
+        <item>ringin</item>
+        <item>toettoet</item>
+    </string-array>
+
+    <string name="title_activity_settings">Settings</string>
+    <string name="action_settings">Settings</string>
+
+</resources>
